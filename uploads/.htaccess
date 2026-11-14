@@ -1,0 +1,4 @@
+# Uploaded files contain customer documents. Block direct HTTP access; download.php
+# checks the signed-in user and streams authorized files from disk.
+Options -Indexes
+Require all denied
