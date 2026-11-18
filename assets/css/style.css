@@ -407,3 +407,5 @@ th { background:var(--mint); color:var(--ink); }
 .order-card .actions-row > .btn-outline:hover { color:var(--ink); background:var(--teal); border-color:var(--teal); }
 .admin-manage-form-area + h2 + .table-wrap .btn-outline { color:#fff; background:var(--navy); border-color:var(--navy); }
 .admin-manage-form-area + h2 + .table-wrap .btn-outline:hover { color:var(--ink); background:var(--teal); border-color:var(--teal); }
+.admin-manage-form-area .form .btn-outline { color:#fff; background:var(--navy); border-color:var(--navy); }
+.admin-manage-form-area .form .btn-outline:hover { color:var(--ink); background:var(--teal); border-color:var(--teal); }
