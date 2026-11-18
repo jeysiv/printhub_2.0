@@ -155,3 +155,17 @@
     .service-order-link svg { width: 16px; height: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { .service-menu-card,.service-order-link { transition: none; } }
+
+/* Keep the services landing page on the shared PrintHub palette. */
+.services-page { background:radial-gradient(circle at 8% 0%,rgba(91,145,163,.10),transparent 25rem),#f6faf8; }
+.services-page ::selection { color:#131B2B; background:#CFEAE0; }
+.services-intro,.services-category,.service-menu-footer { border-color:#d5e5df; }
+.services-eyebrow,.service-menu-amount { color:#2F4A63; }
+.services-page h1,.services-page h2,.services-page h3 { color:#131B2B; }
+.services-intro-copy,.service-menu-description { color:#2F4A63; }
+.category-number,.service-menu-unit { color:#2F4A63; }
+.service-menu-card { border-color:#d5e5df; background:#fff; box-shadow:0 5px 18px rgba(19,27,43,.06); }
+.service-menu-card:hover { border-color:#5B91A3; box-shadow:0 18px 50px rgba(19,27,43,.12); }
+.services-page .service-order-link { color:#fff !important; background:#2F4A63; border-color:#2F4A63; }
+.services-page .service-order-link:hover { color:#131B2B !important; background:#5B91A3; border-color:#5B91A3; }
+.service-order-link:focus-visible { outline-color:#2F4A63; }

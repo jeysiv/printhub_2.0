@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <style>
+      .title{font:700 30px Arial,sans-serif;fill:#172033}.subtitle{font:16px Arial,sans-serif;fill:#596579}
+      .head{font:700 18px Arial,sans-serif;fill:#fff}.st{font:14px Arial,sans-serif;fill:#182235}
+      .note{font:14px Arial,sans-serif;fill:#465268}.box{fill:#fff;stroke:#36445c;stroke-width:2;rx:8}
+      .headbg{fill:#365f91}.abstract{fill:#574b82}.line{stroke:#36445c;stroke-width:2;fill:none}
+      .inherit{stroke:#36445c;stroke-width:2;fill:#fff}.assoc{stroke:#52657e;stroke-width:2;fill:none}
+      .dash{stroke-dasharray:7 5}.divider{stroke:#cbd3df;stroke-width:1}
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1 1 L10 6 L1 11 Z" fill="#fff" stroke="#36445c" stroke-width="1.5"/></marker>
+  </defs>
+  <rect width="1600" height="1100" fill="#f5f7fb"/>
+  <text x="60" y="55" class="title">PrintHub — OOP Class Diagram</text>
+  <text x="60" y="83" class="subtitle">Core account and database model classes (based on the current PHP source)</text>
+
+  <!-- inheritance lines drawn behind classes -->
+  <path class="line" marker-end="url(#arrow)" d="M240 385 L240 360 L480 360 L480 340"/>
+  <path class="line" marker-end="url(#arrow)" d="M700 385 L700 360 L480 360"/>
+  <path class="line" marker-end="url(#arrow)" d="M180 600 L180 520 L1120 520 L1120 320"/>
+  <path class="line" marker-end="url(#arrow)" d="M435 600 L435 520"/>
+  <path class="line" marker-end="url(#arrow)" d="M690 600 L690 520"/>
+  <path class="line" marker-end="url(#arrow)" d="M945 600 L945 520"/>
+  <path class="line" marker-end="url(#arrow)" d="M1200 600 L1200 520 L1120 520"/>
+
+  <!-- account hierarchy -->
+  <g transform="translate(350 105)">
+    <rect class="box" width="260" height="235"/><rect class="abstract" width="260" height="34" rx="8"/>
+    <text x="130" y="23" text-anchor="middle" class="head">«abstract» Account</text>
+    <text x="15" y="60" class="st">- id: int</text><text x="15" y="82" class="st">- name: string</text><text x="15" y="104" class="st">- email: string</text>
+    <line x1="0" y1="117" x2="260" y2="117" class="divider"/>
+    <text x="15" y="142" class="st">+ getId(): int</text><text x="15" y="163" class="st">+ getName(): string</text><text x="15" y="184" class="st">+ getEmail(): string</text>
+    <text x="15" y="205" class="st">+ getHomePage(): string {abstract}</text><text x="15" y="226" class="st">+ getRoleLabel(): string {abstract}</text>
+  </g>
+  <g transform="translate(120 385)">
+    <rect class="box" width="240" height="145"/><rect class="headbg" width="240" height="34" rx="8"/><text x="120" y="23" text-anchor="middle" class="head">Customer</text>
+    <text x="15" y="62" class="st">(inherits Account fields)</text><line x1="0" y1="76" x2="240" y2="76" class="divider"/>
+    <text x="15" y="102" class="st">+ getHomePage(): string</text><text x="15" y="125" class="st">+ getRoleLabel(): string</text>
+  </g>
+  <g transform="translate(580 385)">
+    <rect class="box" width="240" height="145"/><rect class="headbg" width="240" height="34" rx="8"/><text x="120" y="23" text-anchor="middle" class="head">Admin</text>
+    <text x="15" y="62" class="st">(inherits Account fields)</text><line x1="0" y1="76" x2="240" y2="76" class="divider"/>
+    <text x="15" y="102" class="st">+ getHomePage(): string</text><text x="15" y="125" class="st">+ getRoleLabel(): string</text><text x="15" y="141" class="st">+ isAdmin(): bool</text>
+  </g>
+  <text x="130" y="555" class="note">Customer and Admin inherit from Account. The hollow triangle points to the parent.</text>
+
+  <!-- BaseModel -->
+  <g transform="translate(990 100)">
+    <rect class="box" width="260" height="220"/><rect class="abstract" width="260" height="34" rx="8"/><text x="130" y="23" text-anchor="middle" class="head">«abstract» BaseModel</text>
+    <text x="15" y="62" class="st"># db: PDO</text><line x1="0" y1="78" x2="260" y2="78" class="divider"/>
+    <text x="15" y="104" class="st">+ __construct()</text><text x="15" y="126" class="st"># table(): string {abstract}</text>
+    <text x="15" y="148" class="st"># primaryKey(): string {abstract}</text><text x="15" y="170" class="st">+ all(): array</text>
+    <text x="15" y="192" class="st">+ find(id): ?array</text><text x="15" y="214" class="st">+ delete(id): bool</text>
+  </g>
+  <!-- model subclasses -->
+  <g transform="translate(70 600)"><rect class="box" width="220" height="180"/><rect class="headbg" width="220" height="34" rx="8"/><text x="110" y="23" text-anchor="middle" class="head">User</text><text x="15" y="62" class="st">(users table model)</text><line x1="0" y1="76" x2="220" y2="76" class="divider"/><text x="15" y="102" class="st"># table(): string</text><text x="15" y="124" class="st"># primaryKey(): string</text><text x="15" y="146" class="st">+ findByEmail(email)</text><text x="15" y="168" class="st">+ register(name, email, password)</text></g>
+  <g transform="translate(325 600)"><rect class="box" width="220" height="180"/><rect class="headbg" width="220" height="34" rx="8"/><text x="110" y="23" text-anchor="middle" class="head">Category</text><text x="15" y="62" class="st">(categories table model)</text><line x1="0" y1="76" x2="220" y2="76" class="divider"/><text x="15" y="102" class="st"># table(): string</text><text x="15" y="124" class="st"># primaryKey(): string</text><text x="15" y="146" class="st">+ findOrCreate(name): int</text></g>
+  <g transform="translate(580 600)"><rect class="box" width="220" height="180"/><rect class="headbg" width="220" height="34" rx="8"/><text x="110" y="23" text-anchor="middle" class="head">Service</text><text x="15" y="62" class="st">(services table model)</text><line x1="0" y1="76" x2="220" y2="76" class="divider"/><text x="15" y="102" class="st"># table(), primaryKey()</text><text x="15" y="124" class="st">+ allActive(): array</text><text x="15" y="146" class="st">+ save(data, id): void</text><text x="15" y="168" class="st">+ toggleStatus(id): void</text></g>
+  <g transform="translate(835 600)"><rect class="box" width="220" height="180"/><rect class="headbg" width="220" height="34" rx="8"/><text x="110" y="23" text-anchor="middle" class="head">Promotion</text><text x="15" y="62" class="st">(promotions table model)</text><line x1="0" y1="76" x2="220" y2="76" class="divider"/><text x="15" y="102" class="st"># table(), primaryKey()</text><text x="15" y="124" class="st">+ currentlyActive(): array</text><text x="15" y="146" class="st">+ save(data, id): void</text><text x="15" y="168" class="st">+ toggleStatus(id): void</text></g>
+  <g transform="translate(1090 600)"><rect class="box" width="220" height="180"/><rect class="headbg" width="220" height="34" rx="8"/><text x="110" y="23" text-anchor="middle" class="head">Order</text><text x="15" y="62" class="st">(orders + order_items)</text><line x1="0" y1="76" x2="220" y2="76" class="divider"/><text x="15" y="102" class="st"># table(), primaryKey()</text><text x="15" y="124" class="st">+ forUser(userId): array</text><text x="15" y="146" class="st">+ createWithItem(...): int</text><text x="15" y="168" class="st">+ updateStatus(id, status): void</text></g>
+  <g transform="translate(1345 600)"><rect class="box" width="220" height="180"/><rect class="headbg" width="220" height="34" rx="8"/><text x="110" y="23" text-anchor="middle" class="head">Database</text><text x="15" y="62" class="st">(connection utility)</text><line x1="0" y1="76" x2="220" y2="76" class="divider"/><text x="15" y="102" class="st">- connection: PDO</text><text x="15" y="124" class="st">+ connect(): PDO</text><text x="15" y="150" class="st">Creates/reuses PDO connection</text></g>
+
+  <!-- associations -->
+  <path class="assoc" d="M290 685 L325 685"/><text x="291" y="670" class="note">1</text><text x="310" y="670" class="note">0..*</text>
+  <path class="assoc" d="M835 700 L800 700"/><text x="805" y="685" class="note">0..*</text><text x="822" y="685" class="note">1</text>
+  <path class="assoc" d="M1055 700 L1090 700"/><text x="1058" y="685" class="note">0..1</text><text x="1073" y="685" class="note">0..*</text>
+  <path class="assoc dash" d="M180 780 L180 860 L1200 860 L1200 780"/>
+  <path class="assoc dash" d="M690 780 L690 840 L1200 840 L1200 780"/>
+  <text x="70" y="900" class="note">Associations: Category 1 — 0..* Service; User 1 — 0..* Order; Promotion 0..1 — 0..* Order.</text>
+  <text x="70" y="925" class="note">Service 1 — 0..* OrderItem and Order 1 — 1..* OrderItem. OrderItem is the database junction table, not a PHP class.</text>
+  <text x="70" y="975" class="note">Visibility: + public, # protected, - private. Inheritance uses a hollow triangle pointing to the parent class.</text>
+  <text x="70" y="1010" class="note">OOP evidence: abstraction (Account, BaseModel), encapsulation (private Account fields; protected BaseModel database handle), inheritance (subclasses),</text>
+  <text x="70" y="1034" class="note">polymorphism (Admin and Customer implement Account methods differently; Admin overrides isAdmin()).</text>
+</svg>

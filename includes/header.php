@@ -27,8 +27,8 @@ if ($user !== null) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<?= e(SHOP_TAGLINE) ?>">
     <title><?= e($pageTitle) ?> | <?= e(SHOP_NAME) ?></title>
-    <link rel="stylesheet" href="<?= e(url('assets/css/style.css')) ?>">
-    <?php if ($isServicesLanding): ?><link rel="stylesheet" href="<?= e(url('assets/css/services.css')) ?>"><?php endif; ?>
+    <link rel="stylesheet" href="<?= e(url('assets/css/style.css')) ?>?v=<?= (int)filemtime(ROOT_PATH . '/assets/css/style.css') ?>">
+    <?php if ($isServicesLanding): ?><link rel="stylesheet" href="<?= e(url('assets/css/services.css')) ?>?v=<?= (int)filemtime(ROOT_PATH . '/assets/css/services.css') ?>"><?php endif; ?>
 </head>
 <body<?= $bodyClass !== '' ? ' class="' . e($bodyClass) . '"' : '' ?>>
 <a class="skip-link" href="#main">Skip to main content</a>

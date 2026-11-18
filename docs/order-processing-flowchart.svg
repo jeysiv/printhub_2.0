@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="2600" viewBox="0 0 1400 2600">
+<defs>
+ <style>
+  text{font-family:Arial,sans-serif;fill:#111}.title{font-size:30px;font-weight:bold}.sub{font-size:16px}
+  .box{fill:#fff;stroke:#111;stroke-width:2}.dia{fill:#fff;stroke:#111;stroke-width:2}.term{fill:#fff;stroke:#111;stroke-width:2}
+  .txt{font-size:16px;text-anchor:middle}.small{font-size:14px;text-anchor:middle}.branch{font-size:14px}
+  .arrow{fill:none;stroke:#111;stroke-width:2;marker-end:url(#arrow)}
+ </style>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#111"/></marker>
+</defs>
+<rect width="1400" height="2600" fill="#fff"/>
+<text x="55" y="55" class="title">PrintHub — Order Processing</text>
+<text x="55" y="83" class="sub">New orders and items added to an existing pending order</text>
+
+<!-- Authentication and order type -->
+<ellipse cx="650" cy="145" rx="70" ry="38" class="term"/><text x="650" y="151" class="txt">START</text>
+<rect x="520" y="220" width="260" height="75" class="box"/><text x="650" y="250" class="txt"><tspan x="650">Customer opens</tspan><tspan x="650" dy="22">the Order page</tspan></text>
+<polygon points="650,335 740,395 650,455 560,395" class="dia"/><text x="650" y="391" class="txt"><tspan x="650">Logged</tspan><tspan x="650" dy="20">in?</tspan></text>
+<rect x="70" y="355" width="220" height="80" class="box"/><text x="180" y="387" class="txt"><tspan x="180">Redirect to login</tspan><tspan x="180" dy="22">then return to Order page</tspan></text>
+<polygon points="180,500 260,555 180,610 100,555" class="dia"/><text x="180" y="551" class="txt"><tspan x="180">Login</tspan><tspan x="180" dy="20">valid?</tspan></text>
+<rect x="20" y="650" width="205" height="75" class="box"/><text x="122" y="680" class="txt"><tspan x="122">Show login errors;</tspan><tspan x="122" dy="22">retry or exit</tspan></text>
+<polygon points="650,500 740,560 650,620 560,560" class="dia"/><text x="650" y="556" class="txt"><tspan x="650">Admin</tspan><tspan x="650" dy="20">account?</tspan></text>
+<rect x="900" y="520" width="270" height="80" class="box"/><text x="1035" y="552" class="txt"><tspan x="1035">Block ordering and send</tspan><tspan x="1035" dy="22">admin to dashboard</tspan></text>
+<ellipse cx="1035" cy="680" rx="65" ry="35" class="term"/><text x="1035" y="686" class="txt">END</text>
+<polygon points="650,675 740,735 650,795 560,735" class="dia"/><text x="650" y="731" class="txt"><tspan x="650">Existing order</tspan><tspan x="650" dy="20">requested?</tspan></text>
+<circle cx="420" cy="735" r="32" class="term"/><text x="420" y="741" class="txt">C</text>
+<polygon points="1030,675 1120,735 1030,795 940,735" class="dia"/><text x="1030" y="727" class="txt"><tspan x="1030">Does it belong</tspan><tspan x="1030" dy="20">to customer and</tspan><tspan x="1030" dy="20">remain pending?</tspan></text>
+<rect x="1150" y="695" width="230" height="85" class="box"/><text x="1265" y="727" class="txt"><tspan x="1265">Show error;</tspan><tspan x="1265" dy="22">redirect to My Orders</tspan></text>
+
+<!-- Forms and validation -->
+<polygon points="330,850 510,850 480,960 300,960" class="box"/><text x="405" y="881" class="txt"><tspan x="405">New order form:</tspan><tspan x="405" dy="21">service, size, copies;</tspan><tspan x="405" dy="21">optional file, promo, notes</tspan></text>
+<polygon points="800,850 980,850 950,960 770,960" class="box"/><text x="875" y="881" class="txt"><tspan x="875">Add-item form:</tspan><tspan x="875" dy="21">service, size, copies;</tspan><tspan x="875" dy="21">optional file only</tspan></text>
+<rect x="500" y="1010" width="300" height="75" class="box"/><text x="650" y="1040" class="txt"><tspan x="650">Submit form (CSRF token)</tspan><tspan x="650" dy="22">then validate fields</tspan></text>
+<polygon points="650,1125 740,1185 650,1245 560,1185" class="dia"/><text x="650" y="1181" class="txt"><tspan x="650">CSRF and</tspan><tspan x="650" dy="20">fields valid?</tspan></text>
+<rect x="300" y="1145" width="220" height="80" class="box"/><text x="410" y="1177" class="txt"><tspan x="410">Show validation errors;</tspan><tspan x="410" dy="22">redisplay the form</tspan></text>
+<polygon points="650,1290 740,1350 650,1410 560,1350" class="dia"/><text x="650" y="1356" class="txt">File attached?</text>
+<rect x="900" y="1310" width="260" height="80" class="box"/><text x="1030" y="1342" class="txt"><tspan x="1030">Check file type/content</tspan><tspan x="1030" dy="22">and maximum size: 5 MB</tspan></text>
+<rect x="900" y="1430" width="260" height="80" class="box"/><text x="1030" y="1462" class="txt"><tspan x="1030">Save valid upload</tspan><tspan x="1030" dy="22">to uploads folder</tspan></text>
+<rect x="1150" y="1310" width="230" height="80" class="box"/><text x="1265" y="1342" class="txt"><tspan x="1265">Invalid file:</tspan><tspan x="1265" dy="22">show error and redisplay</tspan></text>
+<polygon points="650,1540 740,1600 650,1660 560,1600" class="dia"/><text x="650" y="1596" class="txt"><tspan x="650">New order or</tspan><tspan x="650" dy="20">existing item?</tspan></text>
+<rect x="250" y="1700" width="300" height="90" class="box"/><text x="400" y="1730" class="txt"><tspan x="400">DB transaction:</tspan><tspan x="400" dy="21">create order + first item;</tspan><tspan x="400" dy="21">save promotion discount snapshot</tspan></text>
+<rect x="750" y="1700" width="300" height="90" class="box"/><text x="900" y="1730" class="txt"><tspan x="900">Append item to the</tspan><tspan x="900" dy="21">customer's existing</tspan><tspan x="900" dy="21">pending order</tspan></text>
+<polygon points="650,1820 740,1880 650,1940 560,1880" class="dia"/><text x="650" y="1876" class="txt"><tspan x="650">Save</tspan><tspan x="650" dy="20">succeeded?</tspan></text>
+<rect x="900" y="1840" width="300" height="90" class="box"/><text x="1050" y="1870" class="txt"><tspan x="1050">If new order: roll back DB</tspan><tspan x="1050" dy="21">transaction; delete upload</tspan><tspan x="1050" dy="21">if one was saved</tspan></text>
+<polygon points="1050,1960 1140,2020 1050,2080 960,2020" class="dia"/><text x="1050" y="2016" class="txt"><tspan x="1050">Validation</tspan><tspan x="1050" dy="20">exception?</tspan></text>
+<rect x="850" y="2110" width="250" height="80" class="box"/><text x="975" y="2142" class="txt"><tspan x="975">Show validation errors;</tspan><tspan x="975" dy="22">redisplay form</tspan></text>
+<rect x="1130" y="2110" width="250" height="80" class="box"/><text x="1255" y="2142" class="txt"><tspan x="1255">Unexpected DB error:</tspan><tspan x="1255" dy="22">general error page</tspan></text>
+
+<!-- Completion and post-order flow -->
+<rect x="440" y="2010" width="420" height="90" class="box"/><text x="650" y="2040" class="txt"><tspan x="650">Success message; redirect to My Orders</tspan><tspan x="650" dy="22">new order is PENDING; added item stays on pending order</tspan></text>
+<polygon points="650,2130 750,2195 650,2260 550,2195" class="dia"/><text x="650" y="2180" class="txt"><tspan x="650">Customer action</tspan><tspan x="650" dy="20">while pending?</tspan></text>
+<polygon points="350,2150 430,2205 350,2260 270,2205" class="dia"/><text x="350" y="2201" class="txt"><tspan x="350">Confirms</tspan><tspan x="350" dy="20">cancellation?</tspan></text>
+<rect x="180" y="2320" width="280" height="75" class="box"/><text x="320" y="2350" class="txt"><tspan x="320">Set status CANCELLED;</tspan><tspan x="320" dy="21">admin may delete order/files</tspan></text>
+<rect x="500" y="2320" width="260" height="75" class="box"/><text x="630" y="2350" class="txt"><tspan x="630">No cancellation; return</tspan><tspan x="630" dy="21">to My Orders</tspan></text>
+<rect x="850" y="2140" width="300" height="80" class="box"/><text x="1000" y="2172" class="txt"><tspan x="1000">Admin reviews order and</tspan><tspan x="1000" dy="22">selects an allowed status</tspan></text>
+<rect x="850" y="2260" width="300" height="90" class="box"/><text x="1000" y="2290" class="txt"><tspan x="1000">Typical workflow:</tspan><tspan x="1000" dy="21">Confirmed -&gt; Printing -&gt; Ready</tspan><tspan x="1000" dy="21">(not enforced by the app)</tspan></text>
+<rect x="850" y="2390" width="300" height="80" class="box"/><text x="1000" y="2422" class="txt"><tspan x="1000">Customer checks My Orders</tspan><tspan x="1000" dy="22">and picks up when Ready</tspan></text>
+<rect x="850" y="2500" width="300" height="70" class="box"/><text x="1000" y="2528" class="txt"><tspan x="1000">Admin sets COMPLETED;</tspan><tspan x="1000" dy="21">count toward sales total</tspan></text>
+<ellipse cx="650" cy="2540" rx="70" ry="38" class="term"/><text x="650" y="2546" class="txt">END</text>
+<circle cx="1250" cy="2195" r="34" class="term"/><text x="1250" y="2201" class="txt">C</text>
+<ellipse cx="1255" cy="2260" rx="65" ry="35" class="term"/><text x="1255" y="2266" class="txt">END</text>
+
+<!-- Main flow arrows -->
+<path d="M650 183V335" class="arrow"/><path d="M560 395H400V395H290" class="arrow"/><text x="425" y="380" class="branch">No</text>
+<path d="M650 455V500" class="arrow"/><text x="665" y="482" class="branch">Yes</text>
+<path d="M180 435V500" class="arrow"/><path d="M180 610V650" class="arrow"/><text x="194" y="638" class="branch">No</text>
+<path d="M225 688H240V555H260" class="arrow"/><text x="242" y="675" class="branch">Retry</text>
+<path d="M260 555H560V560" class="arrow"/><text x="390" y="541" class="branch">Yes</text>
+<path d="M650 620V675" class="arrow"/><text x="665" y="652" class="branch">No</text>
+<path d="M452 735H560" class="arrow"/>
+<path d="M740 560H900" class="arrow"/><text x="805" y="546" class="branch">Yes</text>
+<path d="M1035 600V645" class="arrow"/>
+<path d="M740 735H940" class="arrow"/><text x="820" y="721" class="branch">Yes</text>
+<path d="M1120 735H1150" class="arrow"/><text x="1122" y="721" class="branch">No</text>
+<path d="M650 795V820H405V850" class="arrow"/><text x="520" y="814" class="branch">No - new</text>
+<path d="M1030 795V820H875V850" class="arrow"/><text x="945" y="814" class="branch">Yes</text>
+<path d="M405 960V985H650V1010M875 960V985H650" class="arrow"/>
+<path d="M650 1085V1125" class="arrow"/><path d="M560 1185H520" class="arrow"/><text x="525" y="1171" class="branch">No</text>
+<path d="M410 1145V1100H500V1048" class="arrow"/>
+<path d="M650 1245V1290" class="arrow"/><text x="665" y="1273" class="branch">Yes</text>
+<path d="M740 1350H900" class="arrow"/><text x="800" y="1336" class="branch">Yes</text>
+<path d="M650 1410V1540" class="arrow"/><text x="665" y="1470" class="branch">No file</text>
+<path d="M1030 1390V1430" class="arrow"/><path d="M1030 1390H1150" class="arrow"/><text x="1060" y="1376" class="branch">Invalid</text>
+<path d="M1030 1510V1540H650" class="arrow"/><text x="1045" y="1530" class="branch">Valid; saved</text>
+<path d="M1150 1350V1518H480V900H300" class="arrow"/>
+<path d="M560 1600H400V1700" class="arrow"/><text x="495" y="1586" class="branch">New</text>
+<path d="M740 1600H900V1700" class="arrow"/><text x="800" y="1586" class="branch">Existing</text>
+<path d="M400 1790V1880H560M900 1790V1880H740" class="arrow"/>
+<path d="M740 1880H900" class="arrow"/><text x="810" y="1866" class="branch">No</text>
+<path d="M650 1940V2010" class="arrow"/><text x="665" y="1980" class="branch">Yes</text>
+<path d="M1050 1930V1960" class="arrow"/><text x="1065" y="1948" class="branch">No</text>
+<path d="M1050 2080V2110H975" class="arrow"/><text x="1065" y="2098" class="branch">Yes</text>
+<path d="M1140 2020H1255V2110" class="arrow"/><text x="1160" y="2006" class="branch">No</text>
+<path d="M1255 2190V2225" class="arrow"/>
+<path d="M350 2260V2320" class="arrow"/><text x="365" y="2295" class="branch">Yes</text>
+<path d="M430 2205H500" class="arrow"/><text x="445" y="2191" class="branch">No</text>
+<path d="M550 2195H430" class="arrow"/><text x="470" y="2180" class="branch">Cancel</text>
+<path d="M650 2100V2130" class="arrow"/>
+<path d="M750 2195H1216" class="arrow"/><text x="900" y="2181" class="branch">Add another item</text>
+<path d="M650 2260V2295H800V2180H850" class="arrow"/><text x="665" y="2285" class="branch">No action</text>
+<path d="M760 2357H800V2180H850" class="arrow"/>
+<path d="M1000 2220V2260" class="arrow"/><path d="M1000 2350V2390" class="arrow"/><path d="M1000 2470V2500" class="arrow"/>
+<path d="M1000 2570V2580H650V2578" class="arrow"/><path d="M320 2395V2540H580" class="arrow"/>
+
+<text x="55" y="2580" class="small">All status choices are manual; allowed values are Pending, Confirmed, Printing, Ready, Completed, and Cancelled.</text>
+</svg>

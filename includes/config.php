@@ -17,7 +17,7 @@ const DEBUG    = true;        // true = show error details. Set to false for a "
 // ---- Shop identity (EDIT THESE: they appear on the front page) -----------
 const SHOP_NAME    = 'PrintHub';
 const SHOP_TAGLINE = 'Fast, affordable printing for students, businesses, and events.';
-const SHOP_ADDRESS = '123 Brgy. Lanas, Mangaldan, Pangasinan';
+const SHOP_ADDRESS = '#743 Brgy. Lanas, Mangaldan, Pangasinan';
 const SHOP_PHONE   = '0915 693 3894';
 const SHOP_EMAIL   = 'printhub@gmail.com';
 const SHOP_HOURS   = 'Monday to Sunday, 8:00 AM to 6:00 PM';

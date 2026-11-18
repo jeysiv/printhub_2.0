@@ -7,13 +7,13 @@ use PrintHub\Service;
 $pageTitle = 'Services and Prices';
 $bodyClass = 'services-page';
 $categoryMeta = [
-    'Business Printing' => ['number' => '01', 'accent' => '#F2C94C'],
-    'Custom Printing'   => ['number' => '02', 'accent' => '#F27862'],
-    'Document Printing' => ['number' => '03', 'accent' => '#4D91D8'],
-    'Large Format'      => ['number' => '04', 'accent' => '#8B70C9'],
-    'Marketing'         => ['number' => '05', 'accent' => '#55A878'],
-    'Photo Printing'    => ['number' => '06', 'accent' => '#E879A7'],
-    'School Printing'   => ['number' => '07', 'accent' => '#E98D45'],
+    'Business Printing' => ['number' => '01', 'accent' => '#5B91A3'],
+    'Custom Printing'   => ['number' => '02', 'accent' => '#2F4A63'],
+    'Document Printing' => ['number' => '03', 'accent' => '#CFEAE0'],
+    'Large Format'      => ['number' => '04', 'accent' => '#5B91A3'],
+    'Marketing'         => ['number' => '05', 'accent' => '#2F4A63'],
+    'Photo Printing'    => ['number' => '06', 'accent' => '#CFEAE0'],
+    'School Printing'   => ['number' => '07', 'accent' => '#5B91A3'],
 ];
 
 $byCategory = [];

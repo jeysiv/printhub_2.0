@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="750" viewBox="0 0 1250 750">
+<defs><style>text{font-family:Arial,sans-serif}.title{font-size:29px;font-weight:bold;fill:#172033}.sub{font-size:15px;fill:#596579}.box{fill:#eaf2fb;stroke:#365f91;stroke-width:2;rx:10}.act{fill:#e7f5ed;stroke:#34845a;stroke-width:2;rx:10}.dec{fill:#fff4d8;stroke:#ba8b28;stroke-width:2}.end{fill:#365f91;stroke:#284d78;stroke-width:2}.t{font-size:15px;fill:#1d293b;text-anchor:middle}.et{font-size:15px;font-weight:bold;fill:white;text-anchor:middle}.edge{fill:none;stroke:#52657e;stroke-width:2;marker-end:url(#a)}.yn{font-size:13px;font-weight:bold;fill:#6b5523}</style><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#52657e"/></marker></defs>
+<rect width="1250" height="750" fill="#f5f7fb"/><text x="50" y="50" class="title">PrintHub — Administrator Flow</text><text x="50" y="78" class="sub">Secure dashboard access, order management, and catalog/promotion maintenance</text>
+<ellipse cx="100" cy="170" rx="55" ry="30" class="end"/><text x="100" y="175" class="et">START</text>
+<rect x="195" y="130" width="195" height="80" class="box"/><text x="292" y="162" class="t"><tspan x="292">Admin logs in</tspan><tspan x="292" dy="21">Account role checked</tspan></text>
+<polygon points="490,115 575,170 490,225 405,170" class="dec"/><text x="490" y="166" class="t"><tspan x="490">Admin</tspan><tspan x="490" dy="19">account?</tspan></text>
+<rect x="650" y="130" width="200" height="80" class="act"/><text x="750" y="162" class="t"><tspan x="750">Open admin</tspan><tspan x="750" dy="21">dashboard</tspan></text>
+<rect x="405" y="290" width="200" height="75" class="box"/><text x="505" y="320" class="t"><tspan x="505">Reject / redirect</tspan><tspan x="505" dy="21">customer to own area</tspan></text>
+<polygon points="960,115 1045,170 960,225 875,170" class="dec"/><text x="960" y="166" class="t"><tspan x="960">Choose admin</tspan><tspan x="960" dy="19">task</tspan></text>
+<rect x="870" y="300" width="190" height="85" class="act"/><text x="965" y="332" class="t"><tspan x="965">Orders: view/filter</tspan><tspan x="965" dy="21">status counts, sales</tspan></text>
+<rect x="600" y="470" width="210" height="85" class="act"/><text x="705" y="502" class="t"><tspan x="705">Update order status</tspan><tspan x="705" dy="21">from allowed status list</tspan></text>
+<polygon points="965,450 1050,505 965,560 880,505" class="dec"/><text x="965" y="501" class="t"><tspan x="965">Order is</tspan><tspan x="965" dy="19">cancelled?</tspan></text>
+<rect x="1070" y="470" width="150" height="75" class="act"/><text x="1145" y="500" class="t"><tspan x="1145">Delete order</tspan><tspan x="1145" dy="20">and its files</tspan></text>
+<rect x="175" y="470" width="210" height="85" class="act"/><text x="280" y="502" class="t"><tspan x="280">Manage services</tspan><tspan x="280" dy="21">create/edit/activate</tspan></text>
+<rect x="175" y="600" width="210" height="75" class="act"/><text x="280" y="630" class="t"><tspan x="280">Manage promotions</tspan><tspan x="280" dy="21">create/edit/activate</tspan></text>
+<ellipse cx="705" cy="650" rx="65" ry="34" class="end"/><text x="705" y="655" class="et">DONE</text>
+<path d="M155 170H195M390 170H405M575 170H650M850 170H875" class="edge"/><text x="595" y="156" class="yn">Yes</text><path d="M490 225V290" class="edge"/><text x="504" y="263" class="yn">No</text>
+<path d="M960 225V260H965V300" class="edge"/><path d="M960 225V260H705V470" class="edge"/><path d="M875 170H820V500H385" class="edge"/><path d="M820 500V637H385" class="edge"/>
+<path d="M810 512H880" class="edge"/><path d="M1050 505H1070" class="edge"/><text x="1054" y="490" class="yn">Yes</text><path d="M965 560V620H770V650" class="edge"/><text x="978" y="590" class="yn">No</text>
+<path d="M965 385V420H705V470" class="edge"/><path d="M705 555V616" class="edge"/><path d="M280 555V600" class="edge"/>
+<text x="50" y="710" class="sub">Order deletion is available only for cancelled orders. Deleting an order also removes associated uploaded files.</text>
+</svg>

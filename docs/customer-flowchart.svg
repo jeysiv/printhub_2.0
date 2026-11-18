@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1120" viewBox="0 0 1500 1120">
+<defs><style>text{font-family:Arial,sans-serif}.title{font-size:29px;font-weight:bold;fill:#172033}.sub{font-size:15px;fill:#596579}.box{fill:#eaf2fb;stroke:#365f91;stroke-width:2;rx:10}.act{fill:#e7f5ed;stroke:#34845a;stroke-width:2;rx:10}.dec{fill:#fff4d8;stroke:#ba8b28;stroke-width:2}.end{fill:#365f91;stroke:#284d78;stroke-width:2}.t{font-size:15px;fill:#1d293b;text-anchor:middle}.et{font-size:15px;font-weight:bold;fill:white;text-anchor:middle}.edge{fill:none;stroke:#52657e;stroke-width:2;marker-end:url(#a)}.yn{font-size:13px;font-weight:bold;fill:#6b5523}</style><marker id="a" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#52657e"/></marker></defs>
+<rect width="1500" height="1120" fill="#f5f7fb"/><text x="50" y="50" class="title">PrintHub — Customer Flow</text><text x="50" y="78" class="sub">Home page choices, separate login and registration, new orders, and existing orders</text>
+<ellipse cx="90" cy="150" rx="55" ry="30" class="end"/><text x="90" y="155" class="et">START</text>
+<rect x="180" y="110" width="200" height="80" class="box"/><text x="280" y="142" class="t"><tspan x="280">Open home page</tspan><tspan x="280" dy="21">Choose an action</tspan></text>
+<ellipse cx="280" cy="290" rx="68" ry="34" class="end"/><text x="280" y="295" class="et">EXIT SITE</text>
+<rect x="470" y="100" width="210" height="80" class="box"/><text x="575" y="132" class="t"><tspan x="575">Browse services</tspan><tspan x="575" dy="21">and promotions</tspan></text>
+<rect x="470" y="235" width="210" height="80" class="box"/><text x="575" y="267" class="t"><tspan x="575">Log in</tspan><tspan x="575" dy="21">Existing account</tspan></text>
+<rect x="470" y="370" width="210" height="80" class="box"/><text x="575" y="402" class="t"><tspan x="575">Register</tspan><tspan x="575" dy="21">New customer account</tspan></text>
+<rect x="470" y="505" width="210" height="80" class="box"/><text x="575" y="537" class="t"><tspan x="575">Order Now</tspan><tspan x="575" dy="21">Start placing an order</tspan></text>
+<ellipse cx="280" cy="300" rx="70" ry="34" class="end"/><text x="280" y="305" class="et">EXIT SITE</text>
+<rect x="790" y="100" width="210" height="80" class="box"/><text x="895" y="132" class="t"><tspan x="895">Choose service</tspan><tspan x="895" dy="21">then click Order</tspan></text>
+<polygon points="1110,85 1195,140 1110,195 1025,140" class="dec"/><text x="1110" y="136" class="t"><tspan x="1110">Signed in as</tspan><tspan x="1110" dy="19">Customer?</tspan></text>
+<rect x="1270" y="100" width="190" height="80" class="act"/><text x="1365" y="132" class="t"><tspan x="1365">Open order form</tspan><tspan x="1365" dy="21">selected service</tspan></text>
+<polygon points="790,220 870,270 790,320 710,270" class="dec"/><text x="790" y="266" class="t"><tspan x="790">Credentials</tspan><tspan x="790" dy="18">valid?</tspan></text>
+<rect x="930" y="230" width="180" height="80" class="box"/><text x="1020" y="262" class="t"><tspan x="1020">Show login error;</tspan><tspan x="1020" dy="21">retry or exit</tspan></text>
+<rect x="1190" y="230" width="230" height="80" class="act"/><text x="1305" y="262" class="t"><tspan x="1305">Login succeeds:</tspan><tspan x="1305" dy="21">return to requested page</tspan></text>
+<polygon points="790,355 870,405 790,455 710,405" class="dec"/><text x="790" y="401" class="t"><tspan x="790">Registration</tspan><tspan x="790" dy="18">valid?</tspan></text>
+<rect x="930" y="365" width="180" height="80" class="box"/><text x="1020" y="397" class="t"><tspan x="1020">Show errors;</tspan><tspan x="1020" dy="21">correct form</tspan></text>
+<rect x="1190" y="365" width="230" height="80" class="act"/><text x="1305" y="397" class="t"><tspan x="1305">Create customer account</tspan><tspan x="1305" dy="21">then redirect to Log in</tspan></text>
+<rect x="790" y="505" width="250" height="80" class="act"/><text x="915" y="537" class="t"><tspan x="915">If not signed in, go to Log in</tspan><tspan x="915" dy="21">after login continue ordering</tspan></text>
+<rect x="1090" y="505" width="250" height="80" class="box"/><text x="1215" y="537" class="t"><tspan x="1215">Order form: service, size,</tspan><tspan x="1215" dy="21">copies, optional file/promo</tspan></text>
+<polygon points="1215,625 1295,675 1215,725 1135,675" class="dec"/><text x="1215" y="671" class="t"><tspan x="1215">Form valid?</tspan></text>
+<rect x="930" y="635" width="170" height="80" class="box"/><text x="1015" y="667" class="t"><tspan x="1015">Correct fields</tspan><tspan x="1015" dy="21">and resubmit</tspan></text>
+<rect x="1090" y="770" width="250" height="75" class="act"/><text x="1215" y="800" class="t"><tspan x="1215">Submit order and view</tspan><tspan x="1215" dy="21">confirmation in My Orders</tspan></text>
+<polygon points="1215,865 1295,915 1215,965 1135,915" class="dec"/><text x="1215" y="911" class="t"><tspan x="1215">Pending order</tspan><tspan x="1215" dy="18">action?</tspan></text>
+<rect x="790" y="875" width="240" height="80" class="act"/><text x="910" y="907" class="t"><tspan x="910">Add item to own pending</tspan><tspan x="910" dy="21">order (existing process)</tspan></text>
+<rect x="790" y="985" width="240" height="70" class="act"/><text x="910" y="1013" class="t"><tspan x="910">Cancel own pending</tspan><tspan x="910" dy="20">order</tspan></text>
+<ellipse cx="1400" cy="915" rx="62" ry="34" class="end"/><text x="1400" y="920" class="et">DONE</text>
+<path d="M145 150H180M380 150H420V140H470M420 150V275H470M420 150V410H470M420 150V545H470M280 190V256" class="edge"/><text x="294" y="225" class="yn">Leave</text>
+<path d="M680 140H790M1000 140H1025" class="edge"/><path d="M1195 140H1270" class="edge"/><text x="1210" y="126" class="yn">Yes</text><path d="M1110 195V270H1190" class="edge"/><text x="1124" y="221" class="yn">No: login</text>
+<path d="M680 275H710M870 270H930" class="edge"/><text x="885" y="257" class="yn">No</text><path d="M790 320V505" class="edge"/><text x="804" y="345" class="yn">Yes; return</text>
+<path d="M680 410H710M870 405H930" class="edge"/><text x="885" y="392" class="yn">No</text><path d="M790 455V465H575V315" class="edge"/><text x="804" y="483" class="yn">Yes: login next</text>
+<path d="M1040 545H1090M1340 545H1410V140H1195" class="edge"/><path d="M1365 180V505H1340" class="edge"/>
+<path d="M1215 585V625" class="edge"/><path d="M1135 675H1100" class="edge"/><text x="1102" y="661" class="yn">No</text><path d="M1015 635V600H1215V585" class="edge"/><path d="M1215 725V770" class="edge"/><text x="1229" y="751" class="yn">Yes</text>
+<path d="M1215 845V865" class="edge"/><path d="M1135 915H1030" class="edge"/><text x="1050" y="901" class="yn">Add item</text><path d="M910 875V745H1080V545H1090" class="edge"/><text x="945" y="735" class="yn">Verify own + pending, then open add-item form</text><path d="M1215 965V1020H1030" class="edge"/><text x="1229" y="995" class="yn">Cancel</text><path d="M1295 915H1338" class="edge"/><text x="1300" y="900" class="yn">Track / done</text><path d="M910 955V985" class="edge"/>
+<text x="50" y="1080" class="sub">Registration creates a customer account, then sends the user to the login form. If ordering triggered login, successful login returns them to the requested order page.</text>
+</svg>
