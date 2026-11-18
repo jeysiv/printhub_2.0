@@ -405,3 +405,5 @@ th { background:var(--mint); color:var(--ink); }
 .custom-size-panel { background:rgba(207,234,224,.28); }
 .order-card .actions-row > .btn-outline { color:#fff; background:var(--navy); border-color:var(--navy); }
 .order-card .actions-row > .btn-outline:hover { color:var(--ink); background:var(--teal); border-color:var(--teal); }
+.admin-manage-form-area + h2 + .table-wrap .btn-outline { color:#fff; background:var(--navy); border-color:var(--navy); }
+.admin-manage-form-area + h2 + .table-wrap .btn-outline:hover { color:var(--ink); background:var(--teal); border-color:var(--teal); }
